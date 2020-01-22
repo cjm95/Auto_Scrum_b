@@ -1,35 +1,33 @@
 package bespin.spring.domain;
 
 public class User {
-	private int bno;
-	private String username;
+	private int num;
+	private String name;
 	private String team;
 	private int age;
 	
 	public User() {}
-	public User(int bno, String username, String team, int age ) {
-		this.bno=bno;
-		this.username=username;
+	public User(int num, String name, String team, int age ) {
+		this.num=num;
+		this.name=name;
 		this.team=team;
 		this.age=age;
-		
-		
 	}
 
-	public int getBno() {
-		return bno;
+	public int getNum() {
+		return num;
 	}
 
-	public void setBno(int bno) {
-		this.bno = bno;
+	public void setNum(int num) {
+		this.num = num;
 	}
 
-	public String getUserName() {
-		return username;
+	public String getName() {
+		return name;
 	}
 
-	public void setUserName(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getTeam() {
@@ -49,7 +47,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [bno=" + bno + ", username=" + username + ", team=" + team + ", age=" + age + "]";
+		return "User [num=" + num + ", name=" + name + ", team=" + team + ", age=" + age + "]";
 	}
 	
 
