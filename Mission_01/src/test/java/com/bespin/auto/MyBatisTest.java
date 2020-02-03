@@ -24,13 +24,13 @@ public class MyBatisTest
     @Test
     public void testSession() throws Exception{
         
-        try(SqlSession session = sqlFactory.openSession()){
-            
-            System.out.println(" >>>>>>>>>> session 출력 : "+session+"\n");
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try(SqlSession session = sqlFactory.openSession()){
+//            
+//            System.out.println(" >>>>>>>>>> session 출력 : "+session+"\n");
+//            
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
     
 }

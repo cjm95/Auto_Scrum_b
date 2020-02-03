@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bespin.spring.mappers.UserMapper">
+	<select id="searchnum" resultType="com.bespin.auto.domain.User" parameterType="String">
+		select * from bespineer where num = #{num};
+	</select>
+	<select id="searchname" resultType="com.bespin.auto.domain.User" parameterType="String">
+		select * from bespineer where name = #{name};
+	</select>
+	<select id="searchteam" resultType="com.bespin.auto.domain.User" parameterType="String">
+		select * from bespineer where team = #{team};
+	</select>
+	
+	<select id="searchAll" resultType="com.bespin.auto.domain.User" parameterType="String">
+		select * from bespineer;
+	</select>
+
+    	<!-- 회원 삽입 -->
+	<insert id="insert" >
+			insert ignore into bespineer (num ,name,team,age)
+					values(#{num},#{name},#{team},#{age})
+	</insert>
+	
+    <update id="update">
+    update bespineer
+    set num = #{num}, name = #{name}, 
+        team = #{team}, age =  #{age}
+    where num = #{curnum};
+    </update>
+    
+    <delete id="delete">
+    delete from bespineer
+    where num = #{curnum};
+    </delete>
+    
+	<delete id="delete_m">
+    	delete from bespineer where num = #{num};
+    </delete>
+
+</mapper>

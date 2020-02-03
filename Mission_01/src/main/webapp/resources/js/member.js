@@ -36,3 +36,4 @@ $(".login-form").validate({
     }
   }
 });
+

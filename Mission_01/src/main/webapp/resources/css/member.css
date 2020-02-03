@@ -57,4 +57,63 @@ html, body {
     -o-transform: translateY(0%);
     transform: translateY(0%);
 }
+/* TODO */
+#susu:hover {
+   text-decoration: underline; /* // 언더라인(아래줄) 스타일 부여 */
+   color:#EDA900;/* // 색변경 */
+}
+.selectC{
+	visibility: hidden;
+	display: none;
+}
+.selectA{
+	visibility: hidden;
+	display: none;
+}
+#selectBtn{
+	visibility: hidden;
+	display: none;
+}
+
+#button1 {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(76, 175, 80);
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+#button1:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 12px 16px 0px, rgba(0, 0, 0, 0.19) 0px 17px 50px 0px;
+}
+#members {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 500px;
+}
+
+#members td, #members th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#members tr:nth-child(even){background-color: #f2f2f2;}
+
+#members tr:hover {background-color: #ddd;}
+
+#members th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
 
