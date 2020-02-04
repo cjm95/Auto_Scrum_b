@@ -106,7 +106,7 @@ $(document).on('click', '#selectBtn', function(){
 
 	});
 /* FIXME */
-	$('#form-delete').attr('action', '/auto/delete/'+tdArr).submit();
+	$('#form-delete').attr('action', '/auto/elimination/'+tdArr).submit();
 
 });
 

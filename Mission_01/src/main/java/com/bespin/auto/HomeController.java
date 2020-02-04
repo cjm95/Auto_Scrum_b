@@ -130,7 +130,7 @@ public class HomeController {
 	
 	
 	/*-------------------------------- Insert ----------------------------------*/
-	
+	//내가 했다 !!
 	@RequestMapping(value="/registration", method = RequestMethod.POST)
 	public String insertPOST(User user, Model model) throws Exception{
 		userService.insert(user);
@@ -140,8 +140,7 @@ public class HomeController {
 	}
 	
 	/*------------------------------- Delete ------------------------------------*/
-//	쉽다면서요 하나도 안쉽자나요
-	@RequestMapping(value = "/delete/{Arr}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/elimination/{Arr}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public RedirectView deleteCustomer(@PathVariable final String[] Arr) {
 		String [] bn = Arr;

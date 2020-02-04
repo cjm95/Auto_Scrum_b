@@ -7,7 +7,7 @@ import com.bespin.auto.domain.User;
 public interface UserService {
 	List<User> getDBAll();
 	List<User> getDB(String id, int i);
-	void insert(User user);
+	void insert(User user); //등록기능 
 	int update(int num,User user);
 	int delete(int bno);
 	public void delete_m(int num);
