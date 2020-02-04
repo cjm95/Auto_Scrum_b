@@ -168,7 +168,7 @@ public class HomeController {
 		return "UserView_ASC";
 	}
 	
-	@RequestMapping(value = "/update/{num}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/modification/{num}", method = RequestMethod.PUT)
 	public String update( @PathVariable final int num, 
 			@RequestParam(value = "usernum") String usernum,
             @RequestParam(value = "username") String username,
