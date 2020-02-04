@@ -14,3 +14,4 @@ public interface UserDao {
 	void delete_m(int num);
 
 }
+//곽미정 수정 이렇게하는거맞냐ㅠㅜㅠㅜㅠㅜㅠ

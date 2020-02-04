@@ -13,3 +13,4 @@ public interface UserService {
 	public void delete_m(int num);
 
 }
+//곽미정 서비스 수정
