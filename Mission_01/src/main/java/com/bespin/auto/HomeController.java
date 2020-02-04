@@ -141,7 +141,7 @@ public class HomeController {
 	
 	/*------------------------------- Delete ------------------------------------*/
 	
-	@RequestMapping(value = "/delete/{Arr}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/elimination/{Arr}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public RedirectView deleteCustomer(@PathVariable final String[] Arr) {
 		String [] bn = Arr;

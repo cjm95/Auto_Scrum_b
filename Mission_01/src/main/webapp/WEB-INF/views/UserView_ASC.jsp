@@ -24,7 +24,7 @@
 $(document).on('click', '#singleDel', function(){
 	var num = new Array();
 	num.push($("#usernum").attr("value"));
-	$('#single-delete').attr('action','/auto/delete/'+num).submit();
+	$('#single-delete').attr('action','/auto/elimination/'+num).submit();
 /* FIXME */
 });
 
