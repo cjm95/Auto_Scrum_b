@@ -1,8 +1,8 @@
-package com.bespin.auto;
+package com.bespin.auto.service;
 
 import java.util.List;
 
-import com.bespin.auto.User;
+import com.bespin.auto.domain.User;
 
 public interface UserService {
 	List<User> getDBAll();

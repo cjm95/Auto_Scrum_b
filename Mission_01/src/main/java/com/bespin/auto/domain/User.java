@@ -1,4 +1,4 @@
-package com.bespin.auto;
+package com.bespin.auto.domain;
 
 public class User {
 	private int num;

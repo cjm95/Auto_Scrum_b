@@ -3,7 +3,7 @@
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List"%>
-<%@ page import="com.bespin.auto.User"%>
+<%@ page import="com.bespin.auto.domain.User"%>
 
 <!DOCTYPE html>
 <html lang="ko">

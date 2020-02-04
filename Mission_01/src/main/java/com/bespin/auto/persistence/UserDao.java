@@ -1,8 +1,8 @@
-package com.bespin.auto;
+package com.bespin.auto.persistence;
 
 import java.util.List;
 
-import com.bespin.auto.User;
+import com.bespin.auto.domain.User;
 
 public interface UserDao {
 	List<User> getDBAll();

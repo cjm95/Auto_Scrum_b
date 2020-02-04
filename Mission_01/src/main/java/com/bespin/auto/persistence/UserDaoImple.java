@@ -1,4 +1,4 @@
-package com.bespin.auto;
+package com.bespin.auto.persistence;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.bespin.auto.User;
+import com.bespin.auto.domain.User;
 import com.ibatis.common.resources.Resources;
 
 //Spring 프레임워크에게 영속 계층 콤포넌트(DAO)임을 알려주는 어노테이션
