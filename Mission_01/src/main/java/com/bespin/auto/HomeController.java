@@ -90,7 +90,7 @@ public class HomeController {
 	
 	
 	/*-------------------------------- Insert ----------------------------------*/
-	//내가 했다 !!
+	
 	@RequestMapping(value="/registration", method = RequestMethod.POST)
 	public String insertPOST(User user, Model model) throws Exception{
 		userService.insert(user);
@@ -100,7 +100,6 @@ public class HomeController {
 	}
 	
 	/*------------------------------- Delete ------------------------------------*/
-
 	
 	@RequestMapping(value = "/removal/{Arr}", method = RequestMethod.DELETE)
 	@ResponseBody

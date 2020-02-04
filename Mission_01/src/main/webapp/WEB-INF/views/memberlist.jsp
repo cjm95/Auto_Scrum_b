@@ -104,9 +104,7 @@ $(document).on('click', '#selectBtn', function(){
 
 	});
 /* FIXME */
-
 	$('#form-delete').attr('action', '/auto/removal/'+tdArr).submit();
-
 
 });
 
