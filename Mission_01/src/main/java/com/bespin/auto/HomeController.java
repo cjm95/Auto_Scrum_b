@@ -140,7 +140,7 @@ public class HomeController {
 	}
 	
 	/*------------------------------- Delete ------------------------------------*/
-	
+//	쉽다면서요 하나도 안쉽자나요
 	@RequestMapping(value = "/delete/{Arr}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public RedirectView deleteCustomer(@PathVariable final String[] Arr) {
