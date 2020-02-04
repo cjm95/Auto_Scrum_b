@@ -104,11 +104,9 @@ $(document).on('click', '#selectBtn', function(){
 
 	});
 /* FIXME */
-<<<<<<< HEAD
-	$('#form-delete').attr('action', '/auto/elimination/'+tdArr).submit();
-=======
+
 	$('#form-delete').attr('action', '/auto/removal/'+tdArr).submit();
->>>>>>> hj
+
 
 });
 
