@@ -1,43 +1,3 @@
-/*package com.bespin.auto;
-
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-@Controller
-public class HomeController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "member";
-	}
-//	@RequestMapping(value="/member2", method = RequestMethod.GET)
-//	public String search() {
-//		logger.info("searchController");
-//
-//		return "member2";
-//	}
-//	
-}*/
-
 package com.bespin.auto;
 
 import javax.servlet.http.HttpServletRequest;
@@ -140,7 +100,12 @@ public class HomeController {
 	}
 	
 	/*------------------------------- Delete ------------------------------------*/
+<<<<<<< HEAD
 	@RequestMapping(value = "/elimination/{Arr}", method = RequestMethod.DELETE)
+=======
+	
+	@RequestMapping(value = "/removal/{Arr}", method = RequestMethod.DELETE)
+>>>>>>> hj
 	@ResponseBody
 	public RedirectView deleteCustomer(@PathVariable final String[] Arr) {
 		String [] bn = Arr;
@@ -152,7 +117,7 @@ public class HomeController {
 				user.setCurnum(Integer.parseInt(bn[i].replace("BG", "")));
 				int result = userService.delete(user.getCurnum());
 			}
-			return new RedirectView("http://ec2-13-125-208-143.ap-northeast-2.compute.amazonaws.com:8088/auto/members");
+			return new RedirectView("http://localhost:8080/auto/members");
 	}
 
 	

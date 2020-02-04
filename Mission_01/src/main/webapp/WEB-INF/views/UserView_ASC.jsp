@@ -3,8 +3,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:useBean id="m" class="com.bespin.auto.persistence.DAO" scope="page"></jsp:useBean>
-
 
 <!DOCTYPE html>
 <html>
@@ -24,25 +22,27 @@
 $(document).on('click', '#singleDel', function(){
 	var num = new Array();
 	num.push($("#usernum").attr("value"));
+<<<<<<< HEAD
 	$('#single-delete').attr('action','/auto/elimination/'+num).submit();
+=======
+	$('#single-delete').attr('action','/auto/removal/'+num).submit();
+>>>>>>> hj
 /* FIXME */
 });
 
 </script>
 
 <body>
-    <% 		
- // request 객체로부터 파라미터를 가져옴.
- 	User context = new User();
-    context = m.updatelist(request.getParameter("num"));
-    String cnum = request.getParameter("num");
-//    System.out.println(cnum);
-    String currentNum = String.format("%05d", Integer.parseInt(cnum));
-	%>
+
 <div id="login-page" class="row">
   <div class="col s12 z-depth-4 card-panel">
+<<<<<<< HEAD
     <form class="login-form" action="modification/<%= context.getNum() %>" method="post" name="updateform">
 
+=======
+  <c:forEach items="${listAll}" var="user">
+    <form class="login-form" action="modification/${user.num} }" method="post" name="updateform">
+>>>>>>> hj
  <input type="hidden" name="_method" value="put" name ="num" /> 
       <div class="row">
         <div class="input-field col s12 center">
@@ -52,7 +52,7 @@ $(document).on('click', '#singleDel', function(){
       <div class="row margin">
         <div class="input-field col s12">
           <!-- <i class="material-icons prefix">account_circle</i> -->
-          <input id="usernum" name="usernum" type="text"  value=<%= String.format("%05d",context.getNum())%> />
+          <input id="usernum" name="usernum" type="text"  value="${user.num}" />
           <label for="usernum"><b>사번</b>(BG생략)</label>
         </div>
       </div>
@@ -60,7 +60,7 @@ $(document).on('click', '#singleDel', function(){
       <div class="row margin">
         <div class="input-field col s12">
           <!-- <i class="material-icons prefix">email</i> -->
-          <input id="username" name="username" type="text" style="cursor: auto;" maxlength='20'  value="<%=context.getName()%>" />
+          <input id="username" name="username" type="text" style="cursor: auto;" maxlength='20'  value="${user.name}" />
           <label for="username">이름</label>
         </div>
       </div>
@@ -68,7 +68,7 @@ $(document).on('click', '#singleDel', function(){
       <div class="row margin">
         <div class="input-field col s12">
           <!-- <i class="material-icons prefix">vpn_key</i> -->
-          <input id="age" name="age" type="text"  value= <%=context.getAge() %> />
+          <input id="age" name="age" type="text"  value= "${user.age}" />
           <label for="age">나이</label>
         </div>
       </div>
@@ -76,7 +76,7 @@ $(document).on('click', '#singleDel', function(){
       <div class="row margin">
         <div class="input-field col s12">
           <!-- <i class="material-icons prefix">vpn_key</i> -->
-          <input id="department" name="department" type="text"  value= "<%=context.getTeam()%>" />
+          <input id="department" name="department" type="text"  value= "${user.team}" />
           <label for="department">부서</label>
         </div>
       </div>
@@ -89,6 +89,7 @@ $(document).on('click', '#singleDel', function(){
     	<Button type="button" class="btn waves-effect waves-light col s12" id = "singleDel">Delete</button>
 	    </div>
       </div>
+      </c:forEach>
     </form>
     
      <!-- single-delete 구현 -->
