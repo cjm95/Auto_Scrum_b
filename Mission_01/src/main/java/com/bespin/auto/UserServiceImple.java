@@ -1,4 +1,4 @@
-package com.bespin.auto.service;
+package com.bespin.auto;
 
 import java.util.List;
 import org.slf4j.Logger;
@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bespin.auto.domain.User;
-import com.bespin.auto.persistence.UserDao;
+import com.bespin.auto.User;
+import com.bespin.auto.UserDao;
 
 //Spring 프레임워크에게 서비스(비즈니스) 계층의 콤포넌트임을 설정
 //root-context.xml 파일에서 <context:component-scan>의 대상이 됨.

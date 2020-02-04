@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.view.RedirectView;
 
-import com.bespin.auto.domain.User;
-import com.bespin.auto.service.UserService;
+import com.bespin.auto.User;
+import com.bespin.auto.UserService;
 
 /**
  * Handles requests for the application home page.
