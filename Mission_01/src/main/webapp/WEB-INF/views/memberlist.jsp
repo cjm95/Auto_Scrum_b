@@ -4,8 +4,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List"%>
 <%@ page import="com.bespin.auto.domain.User"%>
-<jsp:useBean id="m" class="com.bespin.auto.persistence.DAO" scope="page"></jsp:useBean>
-
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -106,7 +104,7 @@ $(document).on('click', '#selectBtn', function(){
 
 	});
 /* FIXME */
-	$('#form-delete').attr('action', '/auto/delete/'+tdArr).submit();
+	$('#form-delete').attr('action', '/auto/removal/'+tdArr).submit();
 
 });
 
