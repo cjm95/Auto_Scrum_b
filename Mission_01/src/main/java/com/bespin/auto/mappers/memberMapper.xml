@@ -5,6 +5,7 @@
 	<select id="searchnum" resultType="com.bespin.auto.domain.User" parameterType="String">
 		select * from bespineer where num = #{num};
 	</select>
+	
 	<select id="searchname" resultType="com.bespin.auto.domain.User" parameterType="String">
 		select * from bespineer where name = #{name};
 	</select>
