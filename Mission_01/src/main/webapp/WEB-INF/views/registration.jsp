@@ -30,7 +30,7 @@
         <div class="input-field col s12">
           <!-- <i class="material-icons prefix">account_circle</i> -->
           <input id="num" name="num" type="number" required/>
-          <label for="num">사번 (BG 뒷자리 숫자를 입력해주세요)</label>
+          <label for="num">사번 (BG 뒷자리 숫자 입력)</label>
         </div>
       </div>
 

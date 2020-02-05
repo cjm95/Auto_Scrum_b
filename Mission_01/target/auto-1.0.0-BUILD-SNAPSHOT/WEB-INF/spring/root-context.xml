@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- 여기부터 -->
+<!-- MySQL dataSource -->
+    <bean id="dataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="url"
+            value="jdbc:mysql://bespin-proj-team2.csu4pmhqpf94.ap-northeast-2.rds.amazonaws.com:3306/team2_proj?useSSL=false&amp;serverTimezone=UTC">
+        </property>
+        <property name="username" value="team2"></property>
+        <property name="password" value="team2team2"></property>
+    </bean>        
+     
+<!-- mybatis SqlSessionFactoryBean -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+              <property name="configLocation" value="classpath:/mybatis-config.xml" />
+
+      <property name="mapperLocations">
+
+	   <value>classpath:/mappers/**/*</value>
+
+      </property> 
+    </bean>
+ 
+          <!-- SqlSession 객체: SQL 문장 실행/결과 처리 등을 담당 -->
+    <bean id="sqlSession"
+        class="org.mybatis.spring.SqlSessionTemplate"
+        destroy-method="clearCache">
+        <constructor-arg name="sqlSessionFactory" 
+            ref="sqlSessionFactory" />
+    </bean>
+    
+    <!-- Spring 프레임워크가 base-package 아래의 콤포넌트들을 검색해서
+    bean(자바 객체)으로 생성/관리.
+    해당 패키지 아래의 클래스에서는 콤포넌트 어노테이션이 사용되어야 함. -->
+    <context:component-scan base-package="bespin.spring">
+        <context:exclude-filter type="annotation" 
+            expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    
+    <!-- 해당 패키지와 그 하위 패키지 안에서 Mapper 인터페이스를 찾아서 객체 생성 및 관리 -->
+    <mybatis-spring:scan base-package="com.bespin.auto.mappers"/>
+
+
+
+</beans>
