@@ -18,12 +18,12 @@ import com.ibatis.common.resources.Resources;
 
 //Spring 프레임워크에게 영속 계층 콤포넌트(DAO)임을 알려주는 어노테이션
 @Repository
-public class UserDaoImple implements UserDao {
+public class UserDaoImples implements UserDao {
 	// Board 테이블에 대한 SQL 문장들을 찾기 위한 이름 공간(namespace) - mapper.xml
 	private static final String NAMESPACE = 
 			"bespin.spring.mappers.UserMapper";
 	private static final Logger log =
-			LoggerFactory.getLogger(UserDaoImple.class);
+			LoggerFactory.getLogger(UserDaoImples.class);
 
 	@Autowired SqlSession sqlSession;
 	@Override
