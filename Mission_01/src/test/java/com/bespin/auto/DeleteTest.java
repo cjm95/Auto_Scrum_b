@@ -20,10 +20,9 @@ import com.bespin.auto.persistence.UserDao;
 @ContextConfiguration(
 		locations = { "file:src/main/webapp/WEB-INF/spring/**/*.xml" }
 		)
-
-public class SearchTest {
+public class DeleteTest {
 	private static final Logger log =
-			LoggerFactory.getLogger(UpdateTest.class);
+			LoggerFactory.getLogger(DeleteTest.class);
 	
 
 	@Autowired private UserDao userDao;
@@ -32,11 +31,11 @@ public class SearchTest {
 	public void doTest() {
 
 		
-		selectAll();
-		selectOne();
+//		selectAll();
+//		selectOne();
 //		create();
 //		update();
-//		delete();
+		delete();
 //		createReply();
 //		readReplyByBno();
 //		updateReply();
@@ -44,23 +43,8 @@ public class SearchTest {
 //		updateReplyCnt();
 	} // end doTest()
 	
-	private void selectAll() {
-		List result = userDao.getDBAll();
-		
-		log.info("update 결과 = {}", result);
+	private void delete() {
+		int result = userDao.delete(7);
+		log.info("delete 결과 = {}", result);
 	}
-	
-	private void selectOne() {
-		User user = new User();
-		user.setNum(808);
-		user.setAge(28);
-		user.setTeam("play");
-		user.setName("테스트다");
-		user.setCurnum(808);
-		
-		List result = userDao.getDB(user.getName(), 1);
-		
-		log.info("update 결과 = {}", result);
-	}
-
-} // end class DaoTest
+}

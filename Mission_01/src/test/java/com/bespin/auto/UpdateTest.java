@@ -20,9 +20,9 @@ import com.bespin.auto.persistence.UserDao;
 @ContextConfiguration(
 		locations = { "file:src/main/webapp/WEB-INF/spring/**/*.xml" }
 		)
-public class DaoTest {
+public class UpdateTest {
 	private static final Logger log =
-			LoggerFactory.getLogger(DaoTest.class);
+			LoggerFactory.getLogger(UpdateTest.class);
 	
 
 	@Autowired private UserDao userDao;
