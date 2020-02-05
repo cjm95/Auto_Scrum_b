@@ -30,8 +30,7 @@ public class DeleteTest {
 	@Test
 	public void doTest() {
 
-		
-//		selectAll();
+
 //		selectOne();
 //		create();
 //		update();
