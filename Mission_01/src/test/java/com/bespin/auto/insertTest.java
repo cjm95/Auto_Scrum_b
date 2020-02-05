@@ -20,6 +20,8 @@ import com.bespin.auto.persistence.UserDaoImple;
 public class insertTest {
 	
 	//@Inject
+	
+	
 	@Autowired
 	private UserDao userdoa;
 	
