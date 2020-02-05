@@ -15,7 +15,6 @@ pageEncoding="UTF-8"%>
 <script>
 	jQuery(document).ready(function() {
 		location.href='registration';
-		//log
 	});
 </script>
 
