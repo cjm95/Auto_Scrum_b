@@ -24,7 +24,7 @@ import com.bespin.auto.domain.User;
 import com.bespin.auto.service.UserService;
 
 /**
- * Handles requests for the application home page
+ * Handles requests for the application home page.
  */
 @Controller
 public class HomeController {
