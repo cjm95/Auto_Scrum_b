@@ -33,7 +33,7 @@ $(document).on('click', '#singleDel', function(){
 <div id="login-page" class="row">
   <div class="col s12 z-depth-4 card-panel">
   <c:forEach items="${listAll}" var="user">
-    <form class="login-form" action="modification/${user.num} }" method="post" name="updateform">
+    <form class="login-form" action="modification/${user.num}" method="post" name="updateform">
  <input type="hidden" name="_method" value="put" name ="num" /> 
       <div class="row">
         <div class="input-field col s12 center">
