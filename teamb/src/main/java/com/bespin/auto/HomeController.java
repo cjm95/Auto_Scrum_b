@@ -149,6 +149,6 @@ public class HomeController {
 		int result = userService.update(user.getCurnum(), user);
 		
 		// 게시글 수정 이후에 상세보기 페이지로 이동(redirect)
-		return "redirect:/searchall";
+		return "redirect:/members";
 	}
 }
