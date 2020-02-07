@@ -114,8 +114,7 @@ public class HomeController {
 				user.setCurnum(Integer.parseInt(bn[i].replace("BG", "")));
 				int result = userService.delete(user.getCurnum());
 			}
-			return new RedirectView("http://ec2-13-125-253-208.ap-northeast-2.compute.amazonaws.com
-:8088/auto/members");
+			return new RedirectView("http://ec2-13-125-253-208.ap-northeast-2.compute.amazonaws.com:8088/auto/members");
 	}
 
 	
