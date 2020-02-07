@@ -25,7 +25,9 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import com.bespin.auto.domain.User;
 import com.bespin.auto.service.UserService;
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 @Controller
+@EnableEncryptableProperties
 @SpringBootApplication
 public class Bespin01Application {
 	

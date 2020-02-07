@@ -6,7 +6,6 @@
 <html>
 <head>
 <link href="<c:url value="/resources/css/member.css" />" rel="stylesheet" />
-<link href="<c:url value="/resources/css/member2.css" />" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 <script src="<c:url value="/resources/js/member.js"/>"></script>

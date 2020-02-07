@@ -35,6 +35,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		Date date = new Date();
@@ -113,7 +114,7 @@ public class HomeController {
 				user.setCurnum(Integer.parseInt(bn[i].replace("BG", "")));
 				int result = userService.delete(user.getCurnum());
 			}
-			return new RedirectView("http://ec2-13-125-208-143.ap-northeast-2.compute.amazonaws.com:8088/auto/members");
+			return new RedirectView("http://localhost:8080/auto/members");
 	}
 
 	
