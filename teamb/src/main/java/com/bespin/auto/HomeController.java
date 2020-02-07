@@ -100,7 +100,7 @@ public class HomeController {
 		return "success";
 	}
 	
-	/*------------------------------- Delete ------------------------------------*/
+	/*------------------------------- Delete -------------------------------------*/
 	
 	@RequestMapping(value = "/removal/{Arr}", method = RequestMethod.DELETE)
 	@ResponseBody
