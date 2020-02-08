@@ -102,7 +102,7 @@ public class HomeController {
 	
 	/*------------------------------- Delete -------------------------------------*/
 	
-	@RequestMapping(value = "/removal/{Arr}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/removal/{Arr}", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public RedirectView deleteCustomer(@PathVariable final String[] Arr) {
 		String [] bn = Arr;
@@ -129,7 +129,7 @@ public class HomeController {
 		return "UserView_ASC";
 	}
 	
-	@RequestMapping(value = "/modification/{num}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/modification/{num}", method = {RequestMethod.GET, RequestMethod.POST})
 	public String update( @PathVariable final int num, 
 			@RequestParam(value = "usernum") String usernum,
             @RequestParam(value = "username") String username,
