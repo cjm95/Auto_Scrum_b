@@ -84,7 +84,7 @@ $(document).on('click', '#singleDel', function(){
     </form>
     
      <!-- single-delete 구현 -->
-	<form id="single-delete" action="/questions/${question.questionId}" method="post">
+	<form id="single-delete" action="/questions/${question.questionId}" method="delete">
 		<input type="hidden" name="_method" value="DELETE" />
 	</form>
 
