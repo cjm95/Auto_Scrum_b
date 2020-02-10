@@ -36,7 +36,6 @@
 
       <div class="row margin">
         <div class="input-field col s12">
-          <!-- <i class="material-icons prefix">email</i> -->
           <input id="name" name="name" type="text" style="cursor: auto;" required />
           <label for="name">이름</label>
         </div>
