@@ -12,6 +12,9 @@
 	<select id="searchteam" resultType="com.bespin.auto.domain.User" parameterType="String">
 		select * from bespineer where team = #{team};
 	</select>
+        <select id="searchage" resultType="com.bespin.auto.domain.User" parameterType="String">
+                select * from bespineer where age = #{age};
+        </select>
 	
 	<select id="searchAll" resultType="com.bespin.auto.domain.User" parameterType="String">
 		select * from bespineer;
