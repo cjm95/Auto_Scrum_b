@@ -122,6 +122,7 @@ $(document).on('click', '#selectBtn', function(){
 				  <option value='num' >사번</option>
 				  <option value='name' selected>이름</option>
 				  <option value='team' >부서</option>
+				  <option value='age' >나이</option>
 				</select> </td>
 		      	<td> <input type="text" name= "action"> </td>
 			    <td> <Button id="button1" type= "submit"> 검색 </Button> </td>
