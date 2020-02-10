@@ -41,7 +41,7 @@ public class UserDaoImple implements UserDao {
 		if(i==0) vo = sqlSession.selectList(NAMESPACE + ".searchnum", id);
 		else if(i==1) vo = sqlSession.selectList(NAMESPACE + ".searchname", id);
 		else if(i==2) vo = sqlSession.selectList(NAMESPACE + ".searchteam", id);
-		
+		else vo = sqlSession.selectList(NAMESPACE + ".searchage", id);
 		return vo;
 	}
 
