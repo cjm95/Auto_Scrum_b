@@ -57,7 +57,8 @@ public class HomeController {
 		int i = 1;
 		if(attr.equals("num")) i=0;
 		else if(attr.equals("name")) i=1;
-		else i=2;
+                else if(attr.equals("team")) i=2;
+		else i=3;
 
 		List<User> vo = userService.getDB(id, i);
 		model.addAttribute("listAll", vo);
